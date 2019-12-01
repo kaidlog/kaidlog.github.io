@@ -17,6 +17,210 @@
     
     
     <entry>
+      <title>閱讀心得_華爾街之狼從良記</title>
+      <link href="/2019/11/23/feedback/"/>
+      <url>/2019/11/23/feedback/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Feedback and Others </category>
+          
+          <category> Books </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> feedback </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>問與答 Q and A</title>
+      <link href="/2019/11/23/QandA/"/>
+      <url>/2019/11/23/QandA/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> QA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何在部落格加入你的旅行足跡 How to add your footprint in your blog</title>
+      <link href="/2019/11/23/blog/"/>
+      <url>/2019/11/23/blog/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="How-to-use-jVectorMap-to-create-your-own-traveling-footprint"><a href="#How-to-use-jVectorMap-to-create-your-own-traveling-footprint" class="headerlink" title="How to use jVectorMap to create your own traveling footprint"></a>How to use jVectorMap to create your own traveling footprint</h1><p><img alt="My footprint" data-src="https://i.imgur.com/TqaKqox.png" class="lazyload"></p><h2 id="jVectorMap"><a href="#jVectorMap" class="headerlink" title="jVectorMap"></a>jVectorMap</h2><p>JVectorMap 是一個優秀的、兼容性強的 jQuery 地圖插件。</p><p>它可以工作在包括 IE6 在内的各款瀏覽器中，矢量圖輸出，除官方提供各國地圖資料外，用戶可以使用數據轉換程序定制地圖數據。例如街道地圖、小區地圖等等。</p><p><img alt="jVectorMap" data-src="http://wx4.sinaimg.cn/large/cf5b72a1ly1fvv2t7olhjj20ss0e8jvo.jpg" class="lazyload"></p><p>那麼今天的目標就是打造自己的足跡地圖並放置到自己的 Blog 上</p><h2 id="目錄結構"><a href="#目錄結構" class="headerlink" title="目錄結構"></a>目錄結構</h2><p><img alt data-src="https://i.imgur.com/9kRBcwL.png" class="lazyload"></p><ul><li><p>红色框中的文件是必须要引入的内容。</p></li><li><p>藍色框中的文件是展示的地圖，可自行到官網下載需要的地圖 : <a href="http://jvectormap.com/maps/world/world/" target="_blank" rel="noopener">http://jvectormap.com/maps/world/world/</a>，複製到 js 目錄。</p></li><li><p>index.html 中需要添加足跡位置和相關樣式。</p></li></ul><h2 id="開始"><a href="#開始" class="headerlink" title="開始"></a>開始</h2><p> <code>index.html</code> 分為三部分介紹：</p><ul><li>如何更換不同國家地圖。</li></ul><ul><li>如何修改地圖顏色等相關樣式。</li></ul><ul><li>如何添加足跡位置。</li></ul><h2 id="第一部分：如何更換不同國家地圖。"><a href="#第一部分：如何更換不同國家地圖。" class="headerlink" title="第一部分：如何更換不同國家地圖。"></a>第一部分：如何更換不同國家地圖。</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--import jQuery framework--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/jquery-1.9.1.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--加入jVectorMap--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/jquery-jvectormap-1.2.2.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--import css--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"js/jquery-jvectormap-1.2.2.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">media</span>=<span class="string">"screen"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--import chinese map database--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--script type="text/javascript" src="js/jquery-jvectormap-cn-merc-en.js"&gt;&lt;/script--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--import US map database--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--script type="text/javascript" src="js/jquery-jvectormap-us-aea.js"&gt;&lt;/script--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--import world map database--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/jquery-jvectormap-world-mill.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure><p>提前下載需要的國家地圖，複製到 js 目錄下。</p><p>在 <code>&lt;head&gt;</code> 標籤裡引入地圖資料： <code>&lt;script type=&quot;text/javascript&quot; src=&quot;js/地圖文件名&quot;&gt;&lt;/script&gt;</code></p><p><strong>注意</strong> ：同時只能有一個地圖庫，注意不要引入多個地圖數據。可以選擇注釋掉其他的，方便更改。</p><h2 id="第二部分：如何修改地圖顏色等相關樣式。"><a href="#第二部分：如何修改地圖顏色等相關樣式。" class="headerlink" title="第二部分：如何修改地圖顏色等相關樣式。"></a>第二部分：如何修改地圖顏色等相關樣式。</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--background-color: 地圖背景颜色--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"map"</span> <span class="attr">style</span>=<span class="string">"background-color:#353535"</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">$(<span class="string">'#map'</span>).vectorMap(&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="comment">// 此處更改地圖</span></span></span><br><span class="line"><span class="actionscript"><span class="comment">//map: 'cn_merc_en',   // 中國地圖</span></span></span><br><span class="line"><span class="actionscript"><span class="comment">//map: 'us-aea',     // 美國地圖</span></span></span><br><span class="line"><span class="actionscript">map: <span class="string">'world-mill'</span>, <span class="comment">// 世界地圖</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="actionscript">backgroundColor: <span class="string">'transparent'</span>,</span></span><br><span class="line"><span class="actionscript">zoomMin: <span class="number">0.9</span>, <span class="comment">// 鼠標縮放時的最小比例</span></span></span><br><span class="line"><span class="actionscript">zoomMax: <span class="number">2.4</span>, <span class="comment">// 鼠標縮放時的最大比例</span></span></span><br><span class="line">focusOn: &#123;</span><br><span class="line">x: 0.55,</span><br><span class="line">y: 2,</span><br><span class="line">scale: 0.9</span><br><span class="line">&#125;,</span><br><span class="line">regionStyle: &#123;</span><br><span class="line">initial: &#123;</span><br><span class="line"><span class="actionscript">fill: <span class="string">'#e5e5e5'</span>,   <span class="comment">// 地圖顏色</span></span></span><br><span class="line"><span class="actionscript"><span class="string">"fill-opacity"</span>: <span class="number">1</span>, <span class="comment">// 省份（州）是否隱藏，鼠標滑動時顯示; 1：顯示，2：隱藏。</span></span></span><br><span class="line"><span class="actionscript">stroke: <span class="string">'none'</span>,</span></span><br><span class="line"><span class="actionscript"><span class="string">"stroke-width"</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="actionscript"><span class="string">"stroke-opacity"</span>: <span class="number">1</span></span></span><br><span class="line">&#125;,</span><br><span class="line">hover: &#123;</span><br><span class="line"><span class="actionscript">fill: <span class="string">'#ccc'</span>,  <span class="comment">// 鼠標滑動至某省分的高亮顏色。</span></span></span><br><span class="line"><span class="actionscript"><span class="string">"fill-opacity"</span>: <span class="number">0.8</span></span></span><br><span class="line">&#125;,</span><br><span class="line">selected: &#123;</span><br><span class="line"><span class="actionscript">fill: <span class="string">'yellow'</span></span></span><br><span class="line">&#125;,</span><br><span class="line">selectedHover: &#123;&#125;</span><br><span class="line">&#125;,</span><br><span class="line">markerStyle: &#123;</span><br><span class="line">        initial: &#123;</span><br><span class="line"><span class="actionscript">            fill: <span class="string">'#fd8888'</span>, <span class="comment">// 足跡位置的填充顏色</span></span></span><br><span class="line"><span class="actionscript">            stroke: <span class="string">'#fff'</span>   <span class="comment">// 足跡位置的描邊顏色</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">hover: &#123;</span><br><span class="line"><span class="actionscript">fill: <span class="string">'#fd2020'</span>, <span class="comment">// 鼠標滑動至足跡位置後的填充顏色</span></span></span><br><span class="line"><span class="actionscript">stroke: <span class="string">'#fff'</span>,  <span class="comment">// 鼠標滑動至足跡位置後的描邊顏色</span></span></span><br><span class="line"><span class="actionscript"><span class="string">"fill-opacity"</span>: <span class="number">0.8</span></span></span><br><span class="line">&#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><p>參照代碼注釋修改顏色和相關樣式。</p><p><strong>千萬注意</strong> ：在更改地图时 <code>map: &#39;地圖名稱&#39;</code>  ，地圖名稱是地圖數據文件名的後半部分。</p><p>例如：</p><p>美國地圖文件名：jquery-jvectormap-us-aea.js</p><p>那地圖的名稱是：us-aea</p><p><strong>但是要注意把 <code>-</code> (横槓)更改成 <code>_</code>（下滑線）。 否則不會顯示地圖。</strong></p><h2 id="第三部分：如何添加足跡位置。"><a href="#第三部分：如何添加足跡位置。" class="headerlink" title="第三部分：如何添加足跡位置。"></a>第三部分：如何添加足跡位置。</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">markers: [ // 足跡位置</span><br><span class="line"></span><br><span class="line">// &#123;latLng: [經度（保留兩位小數）, 緯度（保留兩位小數）], name: '城市名稱'&#125;,</span><br><span class="line">// 推荐查詢經緯度網站：http://www.gpsspg.com/maps.htm</span><br><span class="line"></span><br><span class="line">&#123;latLng: [37.53,-122.19], name: 'LA'&#125;,</span><br><span class="line">&#123;latLng: [35.97,-114.92], name: 'LV'&#125;,</span><br><span class="line">&#123;latLng: [25.03,121.52], name: 'Taipei'&#125;,</span><br><span class="line">&#123;latLng: [22.99,120.18], name: 'Tainan'&#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure><p>推薦查經緯度網站：<a href="http://www.gpsspg.com/maps.htm" target="_blank" rel="noopener">http://www.gpsspg.com/maps.htm</a></p><p>語法：<code>{latLng: [經度（保留兩位小數）, 緯度（保留兩位小數）], name: &#39;城市名稱&#39;},</code>。</p><h2 id="如何嵌入式到Blog中"><a href="#如何嵌入式到Blog中" class="headerlink" title="如何嵌入式到Blog中"></a>如何嵌入式到Blog中</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">style</span>=<span class="string">"max-width: 100%"</span> </span></span><br><span class="line"><span class="tag">      <span class="attr">frameborder</span>=<span class="string">"no"</span> </span></span><br><span class="line"><span class="tag">      <span class="attr">border</span>=<span class="string">"0"</span> </span></span><br><span class="line"><span class="tag">      <span class="attr">marginwidth</span>=<span class="string">"0"</span> </span></span><br><span class="line"><span class="tag">      <span class="attr">marginheight</span>=<span class="string">"0"</span> </span></span><br><span class="line"><span class="tag">      <span class="attr">width</span>=<span class="string">"100%"</span> </span></span><br><span class="line"><span class="tag">      <span class="attr">height</span>=<span class="string">"750px"</span> </span></span><br><span class="line"><span class="tag">      <span class="attr">src</span>=<span class="string">"替換成你的足跡地圖連結"</span>&gt;</span>                                        </span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><p>把製作好的足跡地圖文件放在 server 上，把訪問連結放在 <code>src</code> 中。</p><p>然後將上面的 code 複製到你的 Blog 頁面上即可。</p><p>可配合手機端和等比例縮放。</p><h2 id="下載代碼"><a href="#下載代碼" class="headerlink" title="下載代碼"></a>下載代碼</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/daekony/traveling-footprint-creater</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Development </category>
+          
+          <category> Blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> footprint </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>純分享歌單</title>
+      <link href="/2019/11/23/diary/"/>
+      <url>/2019/11/23/diary/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>最近這陣子都在忙著準備作品集，以及學習托福，感覺都快要瘋掉了，孤獨感一直上身</p><p>休息的時間竟然就loop了這首歌一整天阿</p><iframe width="100%" height="315" src="https://www.youtube.com/embed/Zug3-L36aqI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Emi 真是活潑到讓我心情變的很開心呢~~</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Lifestyle </category>
+          
+          <category> Diary </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> diary </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>更新日誌 Changelog</title>
+      <link href="/2019/11/23/changelog/"/>
+      <url>/2019/11/23/changelog/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h4 id="2019-11-23-version-0-2-0-released"><a href="#2019-11-23-version-0-2-0-released" class="headerlink" title="2019-11-23 version 0.2.0 released"></a>2019-11-23 version 0.2.0 released</h4><ul><li>add helper-wanko</li></ul><h4 id="2019-11-19-version-0-1-1-released"><a href="#2019-11-19-version-0-1-1-released" class="headerlink" title="2019-11-19 version 0.1.1 released"></a>2019-11-19 version 0.1.1 released</h4>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> changelog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>試著一窺在港中國留學生的思維</title>
+      <link href="/2019/11/21/mur/"/>
+      <url>/2019/11/21/mur/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>偶然看到這個 <a href="https://blog.dlzhang.com/" target="_blank" rel="noopener">斑斑碎碎念</a> 的 Blog，覺得甚有趣，於是就有了這篇</p><p><img alt="WOW" data-src="https://i.imgur.com/povqMIj.png" class="lazyload"></p><p>其實我們一直以來都了解這幾家媒體的素質，只是沒想到中國學生也有這般思維，不過不知道她在香港會不會被扁(這是題外話XD)</p><p>話說他們一直叫我們彎彎還真的是不習慣，畢竟我對彎彎的理解都是一個 Line 貼圖的創作者</p><p><img alt="彎彎" data-src="https://i.imgur.com/UjzLQFS.gif" class="lazyload"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Lifestyle </category>
+          
+          <category> Murmuring </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> murmur </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>貨幣簡單模型 Monetary Simple Model</title>
+      <link href="/2019/11/21/eco_related/"/>
+      <url>/2019/11/21/eco_related/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Overlapping-Generation-Models"><a href="#Overlapping-Generation-Models" class="headerlink" title="Overlapping Generation Models"></a>Overlapping Generation Models</h1><h2 id="OLG-model-—-疊代模型"><a href="#OLG-model-—-疊代模型" class="headerlink" title="(OLG) model — 疊代模型"></a>(OLG) model — 疊代模型</h2><h3 id="把人分成兩個時期"><a href="#把人分成兩個時期" class="headerlink" title="把人分成兩個時期"></a>把人分成兩個時期</h3><pre><code>年輕人老人</code></pre><h4 id="⭐把經濟體開始的時期訂為1"><a href="#⭐把經濟體開始的時期訂為1" class="headerlink" title="⭐把經濟體開始的時期訂為1"></a>⭐把經濟體開始的時期訂為1</h4><pre><code>t ≧ 1N(t) 代表t時期出生的人，這邊用來定義”年輕人”N(t-1)代表t-1時期出生的人，這邊用來定義”老人”</code></pre><h4 id="⭐️把消耗品儲蓄數量定為y"><a href="#⭐️把消耗品儲蓄數量定為y" class="headerlink" title="⭐️把消耗品儲蓄數量定為y"></a>⭐️把消耗品儲蓄數量定為y</h4><p>只有年輕的時候可以獲得，老的時候無法獲得</p><h4 id="⭐️疊代模型中，說明老人與年輕人都會消費，因此個體的效益-utility-取決於老人與年輕人的消費組合。"><a href="#⭐️疊代模型中，說明老人與年輕人都會消費，因此個體的效益-utility-取決於老人與年輕人的消費組合。" class="headerlink" title="⭐️疊代模型中，說明老人與年輕人都會消費，因此個體的效益(utility)取決於老人與年輕人的消費組合。"></a>⭐️疊代模型中，說明老人與年輕人都會消費，因此個體的效益(utility)取決於老人與年輕人的消費組合。</h4><p>給定一時期的消費量，個體效益會隨著另一時期的消費量而增加。<br>兩個時期個體皆傾向消費正向的數量。<br>為了讓明天有更多的消費，個體願意放棄今日的消費(如果蘋果相對明天而言充足)。</p><blockquote><p>👉定義一個個體C(1, t)為年輕時的消費，C(2, t+1)為老年時的消費<br>👉假設時間不是關鍵的要素，則這兩時期訂為C(1)，C(2)。</p></blockquote><p><img alt="(圖1)無異曲線，說明了在效益相同(utility)之下，C(1) 和C(2) 之間的關係，A, B, C效益都是一樣的。" data-src="https://cdn-images-1.medium.com/max/1000/1*o8hTw6Y8ZvN6fh_mRxxu9w.png" class="lazyload"></p><blockquote><p>圖1(白話來說如果只有年輕時賺錢，那麼你一輩子賺的錢就是固定的(效益utility)，年輕時 + 老年時花的錢，就等於效益)。</p></blockquote><p><img alt="(圖2)此無異曲線，說明了假如固定一個時期的消費，那麼效益會隨著另一時期的消費增加而增加。" data-src="https://cdn-images-1.medium.com/max/1000/1*O57tQ_EHlCLyuWS8ufaxDA.png" class="lazyload"></p><blockquote><p>圖2 (白話而言，就是假設退休金相同的情況之下，年輕的時候想多花錢則年輕時賺的錢要越多(效益))。</p></blockquote><h4 id="⭐️定義經濟的問題"><a href="#⭐️定義經濟的問題" class="headerlink" title="⭐️定義經濟的問題"></a>⭐️定義經濟的問題</h4><pre><code>老人跟年輕人都想要得到good，但是只有在年輕的時候可以賺取消費品(無儲存性)可行的分配</code></pre><h4 id="⭐️假設年輕人只會儲蓄"><a href="#⭐️假設年輕人只會儲蓄" class="headerlink" title="⭐️假設年輕人只會儲蓄"></a>⭐️假設年輕人只會儲蓄</h4><pre><code>我們可以得到(社會上的消費品總額)(t) = N(t)．y</code></pre><h4 id="⭐️假設在t出生的個體-簡稱t世代-，每個個體，都有相同的終身分配數額。"><a href="#⭐️假設在t出生的個體-簡稱t世代-，每個個體，都有相同的終身分配數額。" class="headerlink" title="⭐️假設在t出生的個體(簡稱t世代)，每個個體，都有相同的終身分配數額。"></a>⭐️假設在t出生的個體(簡稱t世代)，每個個體，都有相同的終身分配數額。</h4><pre><code>i.e. 都是C(1, t)和 C(2, +1)    — 年輕人在 t 時期        (所有年輕人的消費)(t) = N(t) · C(1, t)    — 老人在 t 時期        (所有老人的消費)(t)=N(t-1) · C(2, t)</code></pre><blockquote><p>👊 我們現在可以來說明消費的現象<br>        N(t) · C(1, t) + N(t-1) · C(2, t) ≦ N(t) · y</p></blockquote><h4 id="⭐️假設人口數是固定的-i-e-N-t-N-∀t"><a href="#⭐️假設人口數是固定的-i-e-N-t-N-∀t" class="headerlink" title="⭐️假設人口數是固定的(i.e N(t) = N, ∀t)"></a>⭐️假設人口數是固定的(i.e N(t) = N, ∀t)</h4><pre><code>C(1, t) + C(2, t) ≦ y</code></pre><h4 id="⭐️假設每個時期的消費是固定的-靜態分配"><a href="#⭐️假設每個時期的消費是固定的-靜態分配" class="headerlink" title="⭐️假設每個時期的消費是固定的(靜態分配)"></a>⭐️假設每個時期的消費是固定的(靜態分配)</h4><pre><code>i.e : C(1, t) = C(1), C(2, t)= C(2), ∀tC(1) + C(2) ≦ y— 這呈現了非常簡單的線性等式模型 ∈ C(1), C(2)</code></pre><p><img alt="(圖3)可行解的區域，呈現了可分配的消費資源。A點則是永遠無法達到的。" data-src="https://cdn-images-1.medium.com/max/1000/1*rrXw_S6gMTA0iuKNYY48aA.jpeg" class="lazyload"></p><h2 id="Golden-Rule-Allocation"><a href="#Golden-Rule-Allocation" class="headerlink" title="Golden Rule Allocation"></a>Golden Rule Allocation</h2><pre><code>現在我們疊加上之前所說的個體無異曲線到圖3中，我們可以觀察當靜態分配且人口數不變，也就是時間變數不影響的話，可行分配的最大效益為多少。</code></pre><p><img alt="(圖4)Golden rule 我們可以發現 A 為最大福祉。" data-src="https://cdn-images-1.medium.com/max/1000/1*W9SsDh_NoOGUURrwa21SsA.jpeg" class="lazyload"></p><blockquote><p>圖4，社會生產數額(A曲線)在每一個時期都大於總消費額(y線)，所以只有A可以達到最大效益，在可行解中達到最大社會福祉。D生產過剩，而B，C則生產不足。如圖5</p></blockquote><p><img alt="(圖5) B, C生產不足造成的社會損失。" data-src="https://cdn-images-1.medium.com/max/1000/1*NnlUwDNRWu69gnkR0tgsOA.jpeg" class="lazyload"></p><h3 id="Corollary"><a href="#Corollary" class="headerlink" title="Corollary:"></a>Corollary:</h3><pre><code>靜態分配，對於年輕人跟老人是一個均衡的消費分配，用(C(1*), C(2*))表示。 誰都不能多拿，經濟學家不能偏袒其中一個。</code></pre><h4 id="Decentralized-Solution"><a href="#Decentralized-Solution" class="headerlink" title="Decentralized Solution"></a>Decentralized Solution</h4><pre><code>上面區塊說明的都是集權控制下的分配結果，現在我們想討論的是如果市場自行分配的結果呢?</code></pre><h4 id="⭐️競爭下的平衡-equilibrium-特質有"><a href="#⭐️競爭下的平衡-equilibrium-特質有" class="headerlink" title="⭐️競爭下的平衡(equilibrium)特質有:"></a>⭐️競爭下的平衡(equilibrium)特質有:</h4><pre><code>個體間互相做有利的交易，透過交易，個體傾向取得能力所及的最大效益。價格跟數量必須沒有變化，也就說個體的行為對價格沒有效果。在任何市場中，供需平衡。</code></pre><h4 id="Equilibrium-without-Money"><a href="#Equilibrium-without-Money" class="headerlink" title="Equilibrium without Money"></a>Equilibrium without Money</h4><pre><code>思考一下如果在自由的市場當中，OLG 在我們的經濟體中，沒有money的話?在沒有集權控制之下，是否還可以達到我們之前所說的結果??這樣的交易是不可能存在的，t時期有年輕人跟老年人(t-1時期的年輕人)，如果從事交易，對於年輕人是沒有利益的。對於年輕人而言，老了之後，幾乎是沒有消費品儲蓄的，所以這樣的交易肯定是徒勞無功的。老人想要年輕人生產的消費品，可是老人並沒有年輕人想要的東西。所以，對於一個自給自足的個體，每個人都在年輕的時候把消費品花光光，沒有留下任何東西，所以這樣的效益是很低的。</code></pre><h4 id="Equilibrium-with-Money"><a href="#Equilibrium-with-Money" class="headerlink" title="Equilibrium with Money"></a>Equilibrium with Money</h4><pre><code>在經濟體中給定一個固定的Stock = M，最初的老人一共有N個，所以每個老人都有M/N個。那麼就可以開啟交易，年輕人用消費品跟老人交換貨幣，年輕人在用貨幣跟下個世代的年輕人交換。我們先定義一個單位的貨幣(flat money)相對於消費品的單位價值為V(t)，i.e.，年輕人需要放棄多少消費品來換取一元。相反過來的話，一個消費品多少錢則定義成P(t)。</code></pre><h4 id="⭐️An-Individual’s-Budget"><a href="#⭐️An-Individual’s-Budget" class="headerlink" title="⭐️An Individual’s Budget"></a>⭐️An Individual’s Budget</h4><pre><code>前面有講過一個人分成兩個時期，老年跟少年，在少年時期賺取y個消費品，個體可以吃掉，或者換取金錢。    第一時期(t)        多定義一個M(t)為在少年(t)時期所賺取的金額數        C(1, t) + V(t)M(t) ≦ y        年輕時共賺取y 消費品，在年輕的時候花了C(1, t)然後用V(t)個消費品換一元共換取了M(t)元    第二時期(t+1)        C(2, t+1) ≦ V(t+1) · M(t)        老年的時候，拿著年輕時換取的M(t)元去換取V(t+1)/per dollar 換取了消費品共V(t+1) · M(t)，為老年人最高的消費總額。        V(t) &gt; 0, ∀t，整理以上兩式        第二式 : M(t) ≧ (C(2, t+1))/(V(t+1)), 代入第一式        C(1, t) + [V(t) · C(2, t+1)/ V(t+1)] ≦ y        C(1, t) + (V(t)/ V(t+1))· C(2, t+1) ≦ y — — (2)</code></pre><p><img alt="(圖6) 表示上面方程式(2)的圖" data-src="https://cdn-images-1.medium.com/max/1000/1*ByYdCZUHDo8QsNNnOlnOaA.jpeg" class="lazyload"></p><blockquote><p>V(t+1)/V(t) 👉為金錢回報率</p></blockquote><h3 id="圖6，說明C-1-t-C-2-t-1-為最佳解"><a href="#圖6，說明C-1-t-C-2-t-1-為最佳解" class="headerlink" title="圖6，說明C(1, t) , C(2, t+1)為最佳解"></a>圖6，說明C(1<em>, t) , C(2</em>, t+1)為最佳解</h3><h4 id="stationary-monetary-equilibrium-靜態平衡之下"><a href="#stationary-monetary-equilibrium-靜態平衡之下" class="headerlink" title="stationary monetary equilibrium(靜態平衡之下)"></a>stationary monetary equilibrium(靜態平衡之下)</h4><pre><code>兩世代的消費總額不受t影響，C(1) + V(t+1)/V(t) · C(2) =y</code></pre><h4 id="⭐️帶入個體之後"><a href="#⭐️帶入個體之後" class="headerlink" title="⭐️帶入個體之後"></a>⭐️帶入個體之後</h4><p>N(t) · (y-C(1, t))，為經濟體所需的金錢數額</p><blockquote><p>👆t時期出生的每個年輕人有N(t)個人，一輩子賺取的消費品有y，扣掉年輕時期所花掉的消費額之後剩下的數額。i.e.經濟體總需要的金額。<br>    V(t)M(t) = N(t) · (y-C(1, t))<br>    V(t) = N(t) · (y-C(1, t)) / M(t)<br>    同理t+1時期<br>    V(t+1) = N(t+1) · (y-C(1, t+1)) / M(t+1)<br>    合併兩式</p></blockquote><p><img alt data-src="https://cdn-images-1.medium.com/max/1000/1*f4HV25WVIfgdLA3xbEZJRg.jpeg" class="lazyload"></p><h5 id="我們假設，兩個時代出生的人數是相同的，N-t-N-t-1-，然後換取的金額數也相同，M-t-1-M-t-，做一下消去"><a href="#我們假設，兩個時代出生的人數是相同的，N-t-N-t-1-，然後換取的金額數也相同，M-t-1-M-t-，做一下消去" class="headerlink" title="我們假設，兩個時代出生的人數是相同的，N(t) = N(t+1)，然後換取的金額數也相同，M(t+1) = M(t)，做一下消去"></a>我們假設，兩個時代出生的人數是相同的，N(t) = N(t+1)，然後換取的金額數也相同，M(t+1) = M(t)，做一下消去</h5><p><img alt data-src="https://cdn-images-1.medium.com/max/1000/1*MPK0JyOrtAsaMwTBiHfPJA.jpeg" class="lazyload"></p><blockquote><p>圖(7) 如果人口跟貨幣供給都固定的話，會呈現上圖</p></blockquote><blockquote><p>圖6跟圖7是一樣的表示，靜態貨幣模型式遵守Golden Rule 的。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Commerce </category>
+          
+          <category> Economics </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> model </tag>
+            
+            <tag> olg </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>馬拉松初體驗 First time for Marathon</title>
+      <link href="/2019/11/21/ml_related/"/>
+      <url>/2019/11/21/ml_related/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>體力耍廢了一年後，決定重新開始努力，半馬算是一個給自己的檢定考</p><p>風景算是不錯，鄉村的景色，有灌溉農田的渠道，途中經過南部科學園區，人煙真是稀少 XD</p><p>路上經過<br><img alt="TSMC" data-src="https://1.bp.blogspot.com/-ys4NTttPZKI/XPPsozlMiVI/AAAAAAAAA9w/Ck2d5eBghCAnbUV3qmGxeeuJTMytyWmEwCLcBGAs/s640/bf705e51253c9fe34789b78f52b9d9b5.jpg" class="lazyload"></p><p>在10 k 的時候突然下大雨，那時候經過一個小步道，我非常的喜歡，好像在一個隱居人士散步的場所</p><p><img alt="清幽小徑" data-src="https://1.bp.blogspot.com/-LkXImXPy8Og/XPPsNkR3WmI/AAAAAAAAA9o/jcf2k_nQ8WMfuzFJRmZeaaoLg_5_Mcd-QCLcBGAs/s640/600_212.jpg" class="lazyload"></p><p>雖然在跑道18 k的時候有點抽筋，吃了兩顆鹽錠，不過最後總算是撐完全程，算是給自己了解到體能下降的程度，希望給自己幾個月的時間去自主訓練，慢慢地恢復</p><p>最後我完成了</p><p><img alt="Finished" data-src="https://1.bp.blogspot.com/-uOC2lx3MiaA/XPPoDgDMegI/AAAAAAAAA9I/CmPQUTOb0pESPipQxXWz0Qh1wFHY0BPHACLcBGAs/s640/photo_2019-06-02_23-07-5344.jpg" class="lazyload"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Lifestyle </category>
+          
+          <category> Marathon </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> marathon </tag>
+            
+            <tag> life </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>個人筆記 Notes</title>
       <link href="/2019/11/21/note/"/>
       <url>/2019/11/21/note/</url>
@@ -55,18 +259,18 @@
       
       <categories>
           
-          <category> sport </category>
+          <category> Lifestyle </category>
           
-          <category> e-sport </category>
+          <category> Esport </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Fizz </tag>
+            <tag> fizz </tag>
             
-            <tag> LoL </tag>
+            <tag> lol </tag>
             
         </tags>
       
@@ -79,7 +283,7 @@
       <link href="/2019/11/20/sitemap/"/>
       <url>/2019/11/20/sitemap/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div class="note info">            <p>網站努力架置中 </p>          </div><div class="note danger">            <p>目前朝著數據分析與前端設計的方向努力學習</p>          </div><div class="note warning">            <p>除了分享朋友的粉專連結，偶爾也當個文人墨客抒發一點騷味拉</p>          </div><div class="note success">            <p>另外有時會分享一些運動專欄，健兒當自強~</p>          </div><h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>我好喜歡兩金勘吉哈哈哈</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div class="note info">            <p>網站努力架置中， 目前版本 0.1.1  </p>          </div><div class="note danger">            <p>目前朝著數據分析與前端設計的方向努力學習</p>          </div><div class="note warning">            <p>除了分享朋友的粉專連結，偶爾也當個文人墨客抒發一點騷味拉</p>          </div><div class="note success">            <p>部落格中有任何錯誤或建議歡迎在討論板或粉專留言，謝謝：）</p>          </div><h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>歡迎來到本站，這裡是本站的網站地圖，第一次來的訪客一定要仔細閱讀這篇喔 : )</p><p>隨著本站的文章篇數增加，系統性的瀏覽需求日增，因此規劃了四個主要頁面－分別是 <a href="https://daekony.github.io/about/">關於我 (About)</a>、<a href="https://daekony.github.io/2019/11/20/sitemap/">網站導覽 (Sitemap)</a>、<a href="https://daekony.github.io/2019/11/23/QandA/">常見問題 (Q &amp; A)</a> 和 <a href="https://daekony.github.io/2019/11/23/changelog/">更新日誌 (Changelog)</a>。</p><p>而本篇為網站導覽，提供大家方便理解本站內容架構，你可以把這裡視為後設目錄 (meta-catalogue)，也就是本站系列文目錄的目錄。</p>]]></content>
       
       
       
